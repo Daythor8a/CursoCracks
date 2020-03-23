@@ -22,5 +22,15 @@ public class DataRequestStudent {
    * Student Last Name
    */
   private String lastName;
+  
+  /**
+   * Student City
+   */
+  private String City;
+  
+  /**
+   * Student Company
+   */
+  private String Company;
 
 }

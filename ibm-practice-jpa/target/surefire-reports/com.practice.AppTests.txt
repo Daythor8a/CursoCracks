@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: com.practice.AppTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.835 s <<< FAILURE! - in com.practice.AppTests
+contextLoads  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to load property source from location 'file:./config/ibm-practice-jpa.yml'
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: 
+while scanning for the next token
+found character '\t(TAB)' that cannot start any token. (Do not use \t(TAB) for indentation)
+ in 'reader', line 15, column 1:
+    		
+    ^
+
+
