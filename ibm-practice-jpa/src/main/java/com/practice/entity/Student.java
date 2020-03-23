@@ -1,11 +1,8 @@
 package com.practice.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,43 +11,42 @@ import lombok.Setter;
  * @author edgar.ochoa
  *
  */
-@Entity
+@Document(collection = "STUDENTS")
 @Getter
 @Setter
-@Table ( name = "MStudent")
 public class Student {
   
   /**
    * The Student Id
    */
   @Id
-  @GeneratedValue
-  private int id;
+  private String id;
   
   /**
    * The Student Name
    */
-  @Column(name = "nom_stu")
+  @Field(value = "nombre")
   private String name;
   
   /**
    * The  Student Surname
    */
-  @Column(name = "ape_stu")
+  @Field(value = "apellido")
   private String lastName;
   
   /**
    * The Id Of the Company Related
    * to the Student
    */
-  @OneToOne
-  private int idCompany;
+  //@OneToOne
+  //JoinColumn
+  
+  private Company company;
   
   /**
    * The Id Of the City Related
    * to the Student
    */
-  @OneToOne
-  private int idCity;
+  private City city;
 
 }

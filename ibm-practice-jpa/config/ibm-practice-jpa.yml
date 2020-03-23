@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      database: PRACTICA_IBM
+      username: IBM_PRACTICE
+      password: IBM123456789
+      port: 27017
+      host: curso-platzy-lgctd.mongodb.net
+      ssl-enabled: true
+      socket-timeout: 1500
+      connect-timeout: 1000
+      max-wait-time: 1500
+      auto-connect-retry: true
+      socket-keep-alive: true 		

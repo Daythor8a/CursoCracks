@@ -2,6 +2,7 @@ package com.practice.dao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import com.practice.entity.Student;
 import com.practice.repository.StudentRepository;
 
@@ -10,10 +11,11 @@ import com.practice.repository.StudentRepository;
  * @author edgar.ochoa
  *
  */
+@Component
 public class StudentDao {
 
   @Autowired
-  private StudentRepository studentRepository;
+  private StudentRepository repository;
   
   /**
    * Method to find by name
@@ -21,7 +23,7 @@ public class StudentDao {
    * @return Student
    */
   public Student findByName(String name) {
-      return studentRepository.findByName(name);
+      return repository.findByName(name);
   }
   
   /**
@@ -29,20 +31,20 @@ public class StudentDao {
    * @param Last Name as lastName
    * @return Student
    */
-  public Student findByLastName(String lastName) {
-      return studentRepository.findByLastName(lastName);
-  }
+//  public Student findByLastName(String lastName) {
+//      return repository.findByLastName(lastName);
+//  }
   
   /**
    * Method to find by All parameters
    * @return Student
    */
   public List<Student> findAll(){
-      return studentRepository.findAll();
+      return repository.findAll();
   }
   
   public Student saveStudent(Student student) {
-      return studentRepository.save(student);
+      return repository.save(student);
   }
   
 }
